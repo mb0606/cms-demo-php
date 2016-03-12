@@ -10,18 +10,21 @@ include "includes/header.php";
     <div class="container">
 
         <div class="row">
+            <div class="col-xs-12">                
+                <h1 class="page-header text-center">
+                    BLOG
+                    <small></small>
+                </h1>
+            </div><!--col-12 PAGE TITLE
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
                
                
-                <h1 class="page-header">
-                    Page Heading
-                    <small>Secondary Text</small>
-                </h1>
+
                 
                 <?php
-                    $query = "SELECT * FROM posts";
+                    $query = "SELECT * FROM posts WHERE post_status = 'published'";
 
                     $select_all_posts = mysqli_query($connection, $query);
                     
@@ -42,7 +45,7 @@ include "includes/header.php";
                         <p class="lead">
                             by <a href="index.php"><?php echo $post_author;?></a>
                         </p>
-                        <p><span class="glyphicon glyphicon-time"> </span><?php echo $post_date; ?>  <i class="glyphicon glyphicon-tags"> </i>  <?php echo $post_tags; ?> </p>
+                        <p class="meta"><i class="glyphicon glyphicon-time"></i><?php echo $post_date; ?>  <i class="glyphicon glyphicon-tags"></i>  <?php echo $post_tags; ?> </p>
                         <hr>
                         <img class="img-responsive" src="images/<?php echo $post_image;  ?>" alt="">
                         <hr>

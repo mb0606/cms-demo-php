@@ -12,7 +12,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             CATEGORIES
-                            <small>Author Name</small>
+                            <small></small>
                         </h1>
                         
                         <div class="col-xs-6">

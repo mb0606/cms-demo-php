@@ -1,3 +1,8 @@
+<h1 class="page-header">
+EDIT POST 
+</h1>
+
+
 <?php
 	if(isset($_GET['p_id'])) {
 		
@@ -89,8 +94,11 @@
 			while($row = mysqli_fetch_assoc($select_categories)){
 				$cat_id = $row['cat_id'];
 				$cat_title = $row['cat_title'];
-				
-				echo "<option value='{$cat_id}'>{$cat_title}</option>";
+				if($cat_id === $post_category_id){
+					echo "<option value='{$cat_id}' selected >{$cat_title}</option>";
+				}else{
+					echo "<option value='{$cat_id}' >{$cat_title}</option>";
+				}
 			}
 				
 			?>
@@ -104,8 +112,11 @@
 		<input value="<?php echo $post_author;?>"type="text" class="form-control" name="post_author">
 	</div>
 	<div class="form-group">
-		<label for="post_status">Post Status</label>
-		<input value="<?php echo $post_status;?>" type="text" class="form-control" name="post_status">
+	<label for="post_status">Role</label>
+		<select name="post_status" id="">
+			<option value="Published"<?php if($post_status === "Published")echo 'selected' ;?>>Published</option>
+			<option value="Draft"<?php if($post_status === "Draft")echo 'selected' ;?>>Draft</option>
+		</select>
 	</div>
 	<div class="form-group">
 		<img width="100" src="../images/<?php echo $post_image;?>" alt="">

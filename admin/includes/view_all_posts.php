@@ -1,3 +1,9 @@
+<h1 class="page-header text-center">
+	ALL POSTS 
+	<small></small>
+</h1>
+
+
 <table class="table table-border table-hover">
 	<thead>
 		<tr>
@@ -11,6 +17,8 @@
 			<th>Tags</th>
 			<th>Comments</th>
 			<th>Date</th>
+			<th>Edit</th>
+			<th>Delete</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -56,8 +64,8 @@
 			echo "<td>$post_tags</td>";
 			echo "<td>$post_comment_count</td>";
 			echo "<td>$post_date</td>";	
-			echo "<td><a href='posts.php?source=edit_post&p_id={$post_id}'><i class='glyphicon glyphicon-pencil'></i</a></td>";	
-			echo "<td><a href='posts.php?delete={$post_id}'><i class='glyphicon glyphicon-remove'></i</a></td>";	
+			echo "<td class='text-center'><a href='posts.php?source=edit_post&p_id={$post_id}'><i class='glyphicon glyphicon-pencil'></i</a></td>";	
+			echo "<td class='text-center'><a href='posts.php?delete={$post_id}'><i class='glyphicon glyphicon-remove'></i</a></td>";	
 			echo "</tr>";
 
 		}

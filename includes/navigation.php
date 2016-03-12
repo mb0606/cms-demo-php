@@ -1,4 +1,4 @@
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar  navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -26,9 +26,13 @@
                         echo "<li><a href='#'>{$cat_title}</a></li>";
                     }
                     ?>
-                    <li><a href="http://localhost:8888/cms_demo/admin/">ADMIN</a></li>
+                    
 
                 </ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="http://localhost:8888/cms_demo/admin/">ADMIN</a></li>
+
+				</ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>

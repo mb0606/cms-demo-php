@@ -25,6 +25,7 @@ body {
     width: 100%;
     padding: 0;
     background-color: #fff;
+	min-height:100vh;
 }
 
 .huge {
@@ -43,6 +44,9 @@ body {
 }
 
 /* Top Navigation */
+.navbar-inverse {
+	background-color: #000;
+}
 
 .top-nav {
     padding: 0 15px;
@@ -222,3 +226,12 @@ ul.alert-dropdown {
 .panel-yellow a:hover {
     color: #df8a13;
 }
+
+
+/*FORM*/
+
+
+select, select.form-control {
+    display: block;
+    width: 200px 
+};
