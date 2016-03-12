@@ -48,6 +48,8 @@
                         			<tr>
                         				<th>ID</th>
                         				<th>Category</th>
+                        				<th class='text-center' >Edit</th> 
+                        				<th class='text-center' >Delete</th>
                         			</tr>
                         		</thead>
                         		<tbody>

@@ -67,9 +67,9 @@ EDIT USER
 		
 
 		
-		$update_post = mysqli_query($connection, $query);
+		$update_user = mysqli_query($connection, $query);
 		
-		confirm_query($update_post);
+		confirm_query($update_user);
 		header("Location: users.php");
 	}
 

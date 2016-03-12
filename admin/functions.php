@@ -44,8 +44,8 @@ function find_all_categories(){
 			echo "<tr>";
 			echo "<td>{$cat_id}</td>";
 			echo "<td>{$cat_title}</td>";
-			echo "<td><a  href='categories.php?delete={$cat_id}'><i class='glyphicon glyphicon-remove'></i></a></td>";
-			echo "<td><a  href='categories.php?edit={$cat_id}'><i class='glyphicon glyphicon-pencil'></i></a></td>";
+			echo "<td class='text-center'><a  href='categories.php?edit={$cat_id}'><i class='glyphicon glyphicon-pencil'></i></a></td>";
+			echo "<td class='text-center'><a  href='categories.php?delete={$cat_id}'><i class='glyphicon glyphicon-remove'></i></a></td>";
 			echo "</tr>";
 		}
 }
