@@ -45,7 +45,7 @@
 
 
 			echo "<td>$comment_email</td>";
-			echo "<td>$comment_status</td>";
+			echo "<td class='{$comment_status}'>$comment_status</td>";
 			$query = "SELECT * FROM posts WHERE post_id = {$comment_post_id}";
 			$select_post_id = mysqli_query($connection, $query);
 			

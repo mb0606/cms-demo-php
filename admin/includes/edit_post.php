@@ -69,6 +69,7 @@ EDIT POST
 		$update_post = mysqli_query($connection, $query);
 		
 		confirm_query($update_post);
+		$_SESSION['notice'] = "The post was successfully updated.";
 		header("Location: posts.php");
 	}
 
@@ -112,7 +113,7 @@ EDIT POST
 		<input value="<?php echo $post_author;?>"type="text" class="form-control" name="post_author">
 	</div>
 	<div class="form-group">
-	<label for="post_status">Role</label>
+	<label for="post_status">Status</label>
 		<select name="post_status" id="">
 			<option value="Published"<?php if($post_status === "Published")echo 'selected' ;?>>Published</option>
 			<option value="Draft"<?php if($post_status === "Draft")echo 'selected' ;?>>Draft</option>

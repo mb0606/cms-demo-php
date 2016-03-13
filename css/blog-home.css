@@ -26,3 +26,33 @@ footer {
 .navbar a {
 	color:#666666;
 }
+
+
+.background-header {
+	height: 200px;
+	background-image: linear-gradient(to left, rgba(255,255,255,.5) 1%,rgba(255,255,255,0.31) 69%,rgba(255,255,255,.5) 100%), url(../images/XXX_Stock_Banner_Images_900px_300px4.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	margin-bottom:25px;
+}
+
+.background-header > .page-header {
+    padding: 80px 0 0 0;
+	margin: 10px, 0, 0, 0;
+	color: #eee;
+	
+}
+
+/*SIDEBAR*/
+
+
+#right-sidebar {
+	margin-top:20px;
+}
+.well {
+    -webkit-box-shadow: 3px 3px 5px #ddd;
+    -moz-box-shadow: 3px 3px 5px #ddd;
+    -ms-box-shadow: 3px 3px 5px #ddd;
+    box-shadow: 3px 3px 5px #ddd;
+}

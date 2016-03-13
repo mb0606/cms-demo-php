@@ -235,3 +235,22 @@ select, select.form-control {
     display: block;
     width: 200px 
 };
+
+
+/* Table Status */
+
+.pending {
+	color:aqua;
+}
+.approve {
+	color:green;
+}
+.unapprove {
+	color:red;
+}
+
+.well {
+-webkit-box-shadow: 7px 8px 5px 0px rgba(168,168,168,.5);
+-moz-box-shadow: 7px 8px 5px 0px rgba(168,168,168,.5);
+box-shadow: 7px 8px 5px 0px rgba(168,168,168,.5);
+}

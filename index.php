@@ -10,11 +10,13 @@ include "includes/header.php";
     <div class="container">
 
         <div class="row">
-            <div class="col-xs-12">                
-                <h1 class="page-header text-center">
-                    BLOG
-                    <small></small>
-                </h1>
+            <div class="col-xs-12"> 
+               <div class="background-header">               
+					<h1 class="page-header text-center">
+						BLOG
+						<small></small>
+					</h1>
+                </div>
             </div><!--col-12 PAGE TITLE
 
             <!-- Blog Entries Column -->
@@ -47,7 +49,9 @@ include "includes/header.php";
                         </p>
                         <p class="meta"><i class="glyphicon glyphicon-time"></i><?php echo $post_date; ?>  <i class="glyphicon glyphicon-tags"></i>  <?php echo $post_tags; ?> </p>
                         <hr>
+                        <a href="post.php?p_id=<?php echo $post_id ;?>">
                         <img class="img-responsive" src="images/<?php echo $post_image;  ?>" alt="">
+                        </a>
                         <hr>
                         <p><?php echo $post_content; ?></p>
                         <a class="btn btn-primary" href="post.php?p_id=<?php echo $post_id;?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>

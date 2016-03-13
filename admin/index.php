@@ -143,6 +143,72 @@
 						</div><!-- /.row PANELS-->
 										
                     </div><!-- col-12 -->
+					<?php
+
+						$query = "SELECT * FROM posts WHERE post_status = 'Published'";
+						$select_all_published_posts = mysqli_query($connection, $query);
+						$post_published_count = mysqli_num_rows($select_all_published_posts);
+
+						$query = "SELECT * FROM posts WHERE post_status = 'Draft'";
+						$select_all_draft_posts = mysqli_query($connection, $query);
+						$post_draft_count = mysqli_num_rows($select_all_draft_posts);
+					
+						$query = "SELECT * FROM comments WHERE comment_status = 'pending'";
+						$select_all_pending_comments = mysqli_query($connection, $query);
+						$comment_pending_count = mysqli_num_rows($select_all_pending_comments);
+					
+						$query = "SELECT * FROM users WHERE user_role = 'Subscriber' ";
+						$select_all_subscriber_users = mysqli_query($connection, $query);
+						$subscriber_count = mysqli_num_rows($select_all_subscriber_users);						
+						
+
+					
+					
+					?>
+                    
+                    
+                    <div class="row">
+                    	
+						<script type="text/javascript">
+							  google.charts.load('current', {'packages':['bar']});
+							  google.charts.setOnLoadCallback(drawChart);
+							  function drawChart() {
+								var data = google.visualization.arrayToDataTable([
+								  ['', 'Count' ],
+
+									<?php
+									$element_text = ['All Posts' ,'Published Posts','Draft Posts', 'Comments','Pending Comments', 'Users','Subscribers' , 'Categories'];
+									$element_count = [$post_count,$post_published_count, $post_draft_count, $comment_count,$comment_pending_count, $user_count, $subscriber_count , $cat_count];
+									
+									for($i=0 ; $i < 8; $i++){
+										echo "['{$element_text[$i]}' , {$element_count[$i]} ]," ;
+									}
+									?>
+								]);
+
+								var options = {
+								  chart: {
+									title: 'CMS DEMO',
+									subtitle: 'Blog Stats',
+								  }
+								};
+
+								var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+								chart.draw(data, options);
+							  }
+						</script>
+						<div class="col-sm-12">
+							<div  id="columnchart_material" style="width: 'auto'; height: 500px;"></div>
+						</div>
+                    </div><!-- row CHART -->
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 </div><!-- /.row -->
                 
 

@@ -64,11 +64,6 @@ include "includes/header.php";
     
                 ?>
 
-
-
-
-
-
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="previous">

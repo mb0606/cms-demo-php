@@ -11,8 +11,13 @@
                 <div class="row">
                     <div class="col-lg-12">
 
-                       
                        <?php 
+						
+						if(isset($_SESSION['notice'])){
+						   $notice = $_SESSION['notice'];
+                     		echo "<br><div class='alert alert-success' role='alert'>{$notice}</div>";
+							$_SESSION['notice'] = null;
+						}
 							if(isset($_GET['source'])){
 								
 								$source = $_GET['source'];

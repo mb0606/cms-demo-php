@@ -1,4 +1,4 @@
-    <nav class="navbar  navbar-fixed-top" role="navigation">
+    <nav class="navbar  navbar-fixed-top navbar-default" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -22,17 +22,27 @@
                     $select_all_cat_query = mysqli_query($connection, $query);
                     
                     while($row = mysqli_fetch_assoc($select_all_cat_query)){
+                        $cat_id = $row['cat_id'];
                         $cat_title = $row['cat_title'];
-                        echo "<li><a href='#'>{$cat_title}</a></li>";
+                        echo "<li><a href='category.php?category={$cat_id}&cat_title={$cat_title}'>{$cat_title}</a></li>";
                     }
                     ?>
-                    
+				</ul>                    
+				
 
-                </ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="http://localhost:8888/cms_demo/admin/">ADMIN</a></li>
+					<ul class="nav navbar-nav navbar-right">
+					<?php if($_SESSION['user_role'] === 'Admin') { 
+						if(isset($_GET['p_id'])) {
+						$post_id = $_GET['p_id'];
+						echo "<li><a href='admin/posts.php?source=edit_post&p_id={$post_id}' >Edit Post</a></li>";
+						 } ?>
+						<li><a href="http://localhost:8888/cms_demo/admin/">ADMIN</a></li>
+					<?php } ?>
+						
 
-				</ul>
+					</ul>
+           
+				
             </div>
             <!-- /.navbar-collapse -->
         </div>

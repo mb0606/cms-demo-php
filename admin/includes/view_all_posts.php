@@ -2,11 +2,28 @@
 	ALL POSTS 
 	<small></small>
 </h1>
+<div class="row well">
+<form action="" method="post" >
+	<div id="bulkOptionsContainer" class="col-xs-6 col-md-4 form-group">
+		<select name="" id="" class="form-control">
+			<option value=""></option>
+			<option value="">Make Draft</option>
+			<option value="">Publish</option>
+			<option value="">Delete</option>
+		</select>
+	</div>
+	<div class="col-xs-6 col-md-4">
+		<input type="submit" name="submit" class="btn btn-success" value="Apply">
+		<a href="../posts.php?source=add_post" class="btn btn-primary">Add New</a>
+	</div>
+</div><!--row -->
+
 
 
 <table class="table table-border table-hover">
 	<thead>
 		<tr>
+			<th><input type="checkbox" id="selectAllBoxes"></th>
 			<th>ID</th>
 			<th>Author</th>
 			<th>Title</th>
@@ -38,7 +55,11 @@
 			$post_comment_count = $row['post_comment_count'];
 			$post_date = $row['post_date'];
 
-			echo "<tr>";
+			echo "<tr>"; ?>
+			
+			<td><input type="checkbox" class="checkBox" name="checkBoxArray[]" value="<?php $post_id ;?>"></td>
+			
+			<?php
 			echo "<td>$post_id</td>";
 			echo "<td>$post_author</td>";
 			echo "<td>$post_title</td>";
@@ -88,3 +109,4 @@
 
 	</tbody>
 </table>
+</form>

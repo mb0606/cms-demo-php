@@ -29,7 +29,10 @@ CREATE USER
 		$create_user_query =  mysqli_query($connection, $query);
 		
 		confirm_query($create_user_query);
+		$_SESSION['notice'] = "The user was successfully created.";
 		header("Location: users.php");
+		
+		echo "User Created: " . " ";
 		
 	}
 

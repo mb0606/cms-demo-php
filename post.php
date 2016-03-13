@@ -12,7 +12,7 @@ include "includes/header.php";
         <div class="row">
 
             <!-- Blog Entries Column -->
-            <div class="col-md-8">
+
                
                
 <!--
@@ -38,7 +38,7 @@ include "includes/header.php";
                         $post_content = $row['post_content'];
                         $post_tags = $row['post_tags'];
                 ?>
-                        
+                    <div class="col-xs-12">    
                         <!--Blog Post -->
                         <h2>
                             <?php echo $post_title; ?>
@@ -48,6 +48,8 @@ include "includes/header.php";
                         </p>
                         <p class="meta"><i class="glyphicon glyphicon-time"> </i><?php echo $post_date; ?>  <i class="glyphicon glyphicon-tags"> </i>  <?php echo $post_tags; ?> </p>
                         <hr>
+                    </div><!-- col -12 -->
+                    <div class="col-md-8">
                         <img class="img-responsive" src="images/<?php echo $post_image;  ?>" alt="">
                         <hr>
                         <p><?php echo $post_content; ?></p>
@@ -116,9 +118,6 @@ include "includes/header.php";
                 <hr>
 
                 <!-- Posted Comments -->
-                
-                
-                
                 <?php
 
 					if(isset($_GET['p_id'])) {
@@ -134,8 +133,6 @@ include "includes/header.php";
 							$comment_content = $row['comment_content'];
 							
 				?>			
-							
-							
 							<!-- Comment -->
 							<div class="media">
 								<a class="pull-left" href="#">
@@ -157,12 +154,6 @@ include "includes/header.php";
 				
 				
 				?>
-
-
-                
-                
-                
-                
 			</div><!-- col-8-->
 
             <!-- Blog Sidebar Widgets Column -->
@@ -171,6 +162,5 @@ include "includes/header.php";
         </div><!-- /.row -->
         
 
-        <hr>
 <?php include "includes/footer.php" ?>
                

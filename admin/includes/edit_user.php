@@ -70,6 +70,7 @@ EDIT USER
 		$update_user = mysqli_query($connection, $query);
 		
 		confirm_query($update_user);
+		$_SESSION['notice'] = "The user was successfully Edit.";
 		header("Location: users.php");
 	}
 

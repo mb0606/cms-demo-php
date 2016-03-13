@@ -29,6 +29,7 @@ CREATE POST
 		$create_post_query =  mysqli_query($connection, $query);
 		
 		confirm_query($create_post_query);
+		$_SESSION['notice'] = "The post was successfully created.";
 		header("Location: posts.php");
 		
 	}
@@ -74,7 +75,7 @@ CREATE POST
 	</div>
 
 	<div class="form-group">
-	<label for="post_status">Role</label>
+	<label for="post_status">Status</label>
 		<select name="post_status" id="">
 			<option value="Publish">Published</option>
 			<option value="Draft">Draft</option>
